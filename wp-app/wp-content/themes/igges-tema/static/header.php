@@ -9,10 +9,15 @@
     </title>
     <?php wp_head(); ?>
     <!-- Lägg till din CSS-fil här -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <!-- Lägg till din meny här -->
-        igges tema
+        <div class="header"></div>
+        <nav><a href="news.php">News</a></nav>
+        <nav><a href="single-news.php">Single News</a></nav>
+        <nav><a href="contact.php">Contact</a></nav>
+        <nav><a href="about.php">About</a></nav>
     </header>

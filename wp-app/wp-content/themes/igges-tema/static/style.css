@@ -1,0 +1,22 @@
+/*
+Theme Name: theme-iggeakanacho
+Theme URI: http://www.iggestheme.com
+Description: A site for new and blogs
+Author: igge
+Author URI: http://www.iggeswebsite.com
+Version: 1.0
+Text Domain: staticsite
+*/
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+header,
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Lägg till fler stilar enligt behov */
