@@ -4,30 +4,352 @@ Theme URI: http://www.iggestheme.com
 Description: A site for news and blogs
 Author: igge
 Author URI: http://www.iggeswebsite.com
-Version: 1.1
+Version: 2.2
 Text Domain: iggeakanacho
 */
 
-body {
-  font-family: "Arial", sans-serif;
+/* ---------------------General Styles---------------------- */
+
+* {
+    outline: none;
 }
 
-header,
-footer {
-  background-color: rgb(174, 17, 132);
-  color: #fff;
-  padding: 10px;
-  padding-top: 20px;
-  display: flex;
-  justify-content: center;
-  justify-content: space-evenly;
+body {
+    background-color: #212020;
+    color: white;
 }
 
 a {
-  color: white;
+    color: rgb(246, 81, 215);
 }
 
-.main_content {
-  display: flex;
-  justify-content: center;
+a:hover,
+a:active {
+    color: rgb(20, 15, 162);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+img {
+    max-width: 100%;
+}
+
+label {
+    display: block;
+}
+
+input[type='text'],
+input[type='email'] {
+    display: block;
+    min-width: 200px;
+}
+
+input[type='submit'] {
+    display: block;
+}
+
+textarea {
+    min-width: 200px;
+}
+.wpcf7-form-control {
+    color: white;
+    background-color: #800360;
+}
+/*------------------- Header ---------------------- */
+
+header {
+    background-color: #800360;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.header-title {
+    padding-top: 30px;
+}
+
+.nav {
+    background-color: #333;
+    height: 40px;
+}
+
+.nav .menu {
+    margin: 0;
+    padding: 0;
+}
+
+.nav .menu > li {
+    float: left;
+    line-height: 40px;
+    list-style: none;
+    margin-right: 10px;
+    padding: 0 15px;
+}
+
+.nav .menu > li.current-menu-item {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.nav .menu > li > a {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        height: auto;
+    }
+
+    .nav .menu {
+        margin: 0 -15px;
+    }
+
+    .nav .menu > li {
+        float: none;
+        width: 100%;
+    }
+}
+
+/*---------------------Main styles-------------------------*/
+main {
+    padding: 40px 0;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero .text {
+    color: white;
+    font-size: 22px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 66.66666667%;
+    margin-left: 50px;
+}
+
+.hero .text h1 {
+    font-size: 50px;
+}
+
+@media (max-width: 768px) {
+    .hero .text {
+        color: inherit;
+        font-size: 16px;
+        margin-top: 30px;
+        position: static;
+        text-shadow: none;
+        top: auto;
+        transform: none;
+        width: 100%;
+    }
+
+    .hero .text h1 {
+        font-size: 30px;
+    }
+}
+
+.welcome-text {
+    font-size: 22px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+/*---------------------Thumbnail single.php-------------------------*/
+
+.single-post {
+    background-color: #212020;
+}
+
+.thumbnail {
+    background-color: #3c393c;
+    padding-top: 30px;
+    border: 1px solid #f651d7;
+}
+
+/*---------------------Article Sidebar-------------------------*/
+
+article {
+    background-color: #3c393c;
+    border: solid 1px #f651d7;
+    border-top: solid 2px #f651d7;
+    padding: 30px;
+    position: relative;
+    color: white;
+}
+
+article + article {
+    margin-top: 30px;
+}
+
+article img {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 30px;
+}
+
+article .title {
+    margin-bottom: 10px;
+    color: #f651d7;
+}
+
+article .meta {
+    margin: 0 0 10px;
+    overflow: hidden;
+    padding: 0;
+}
+
+article .meta > li {
+    float: left;
+    list-style: none;
+    margin-right: 15px;
+}
+
+article .meta > li > .fa {
+    margin-right: 5px;
+}
+
+article .categories {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+article .categories > li {
+    float: left;
+    list-style: none;
+    margin-right: 15px;
+}
+
+article .categories > li > a {
+    background-color: crimson;
+    border-radius: 3px;
+    color: white;
+    display: block;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+@media (max-width: 768px) {
+    article .meta {
+        margin: 25px 0;
+    }
+
+    article .meta > li {
+        float: none;
+        margin-right: 0;
+    }
+
+    article .meta > li > .fa {
+        min-width: 20px;
+        text-align: center;
+    }
+}
+
+.side-menu {
+    margin: 0;
+    padding: 0;
+}
+
+.side-menu > li {
+    border-bottom: solid 1px #ccc;
+    list-style: none;
+    padding: 10px 0;
+}
+
+#sidebar {
+    background-color: #333;
+    border: solid 1px black;
+    border-top: solid 1px black;
+    color: white;
+    padding-top: 20px;
+}
+
+#sidebar > ul {
+    border-bottom: solid 1px black;
+    margin: 0;
+    padding: 30px 30px 0;
+}
+
+#sidebar > ul > li {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+#sidebar > ul > li > ul {
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar > ul > li > ul > li {
+    list-style: none;
+}
+
+#sidebar h2 {
+    font-size: 20px;
+}
+
+#sidebar label {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+#sidebar input {
+    border: none;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+}
+
+#sidebar input[type='text'] {
+    color: black;
+    padding: 0 5px;
+}
+
+#sidebar input[type='submit'] {
+    background-color: rgb(217, 20, 220);
+    margin-top: 10px;
+}
+
+/*-------------------Footer-----------------*/
+
+footer {
+    background-color: #800360;
+    color: #ffffff;
+    padding-left: 40px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.footer-column {
+    width: 30%;
+    float: left;
+    margin-right: 5%;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+.clear {
+    clear: both;
 }

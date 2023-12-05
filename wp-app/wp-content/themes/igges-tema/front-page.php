@@ -1,15 +1,29 @@
 <?php get_header(); ?>
 <main>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-11">
+                    <div clas="hero">
+                        <?php if (have_posts()):
+                            while (have_posts()):
+                                the_post() ?>
+                                <img src="<?= the_post_thumbnail_url("large") ?>" alt="">
+                                <div class="text">
+                                    <h1>
+                                        <?php the_title() ?>
+                                    </h1>
+                                    <p>
+                                        <?php the_content(); ?>
+                                    </p>
+                                </div>
 
-<section>
-
-</section>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
-
-<div class="main_content">
-    <h1>Välkommen till min nyhetswebbplats!</h1><br>
-    <p>Det senaste och mest relevanta inom nyheter väntar på dig.</p>
-    <!-- Lägg till unika element för startsidan här -->
-</div>
-
 <?php get_footer(); ?>

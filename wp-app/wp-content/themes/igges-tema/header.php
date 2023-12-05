@@ -12,19 +12,26 @@
 </head>
 
 <body>
-
-<nav>
-
-<?php
- wp_nav_menu(
- array('theme_location' => 'primary'));
-?>
-
-</nav>
-
-    <!-- <header>
-        <nav><a href="news.php">News</a></nav>
-        <nav><a href="single-news.php">Single News</a></nav>
-        <nav><a href="contact.php">Contact</a></nav>
-        <nav><a href="about.php">About</a></nav>
-    </header> -->
+    <header>
+        <div class="header-title">
+            <!-- <h1>GameGroveGazette</h1> -->
+            <img src="assets/gameverse.png" alt="Gameverse Logo">
+        </div>
+    </header>
+    <nav class="nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ul class="menu">
+                        <li class="current-menu-item">
+                            <?php
+                            wp_nav_menu(
+                                array('theme_location' => 'primary')
+                            );
+                            ?>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
