@@ -60,8 +60,8 @@
                         paginate_links(
                             array(
                                 'total' => $wp_query->max_num_pages,
-                                'prev_text' => __('Föregående'),
-                                'next_text' => __('Nästa'),
+                                'prev_text' => __('Back'),
+                                'next_text' => __('Next'),
                             )
                         );
                     ?>
