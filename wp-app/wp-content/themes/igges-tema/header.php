@@ -14,8 +14,7 @@
 <body>
     <header>
         <div class="header-title">
-            <!-- <h1>GameGroveGazette</h1> -->
-            <img src="assets/gameverse.png" alt="Gameverse Logo">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/gvblack.png" alt="Gameverse Logo">
         </div>
     </header>
     <nav class="nav">

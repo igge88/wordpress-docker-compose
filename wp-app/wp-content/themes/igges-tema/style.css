@@ -4,7 +4,7 @@ Theme URI: http://www.iggestheme.com
 Description: A site for news and blogs
 Author: igge
 Author URI: http://www.iggeswebsite.com
-Version: 2.2
+Version: 2.7
 Text Domain: iggeakanacho
 */
 
@@ -17,6 +17,11 @@ Text Domain: iggeakanacho
 body {
     background-color: #212020;
     color: white;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -64,41 +69,58 @@ textarea {
     color: white;
     background-color: #800360;
 }
+
+#about {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#cover {
+    padding: 0;
+    margin-top: -40px;
+}
+
 /*------------------- Header ---------------------- */
 
 header {
     background-color: #800360;
     color: #ffffff;
-    padding-top: 10px;
+    padding-top: 0px;
     padding-bottom: 20px;
     display: flex;
     justify-content: center;
 }
 
 .header-title {
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
 .nav {
     background-color: #333;
     height: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 .nav .menu {
     margin: 0;
     padding: 0;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
 }
 
 .nav .menu > li {
-    float: left;
+    /* float: left; */
     line-height: 40px;
-    list-style: none;
+    /* list-style: none; */
     margin-right: 10px;
+    /* padding: 0 15px; */
     padding: 0 15px;
 }
 
 .nav .menu > li.current-menu-item {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .nav .menu > li > a {
@@ -113,21 +135,73 @@ header {
 
     .nav .menu {
         margin: 0 -15px;
+        flex-direction: column;
     }
 
     .nav .menu > li {
-        float: none;
+        /* float: none;
+        width: 100%; */
+        margin-right: 0;
         width: 100%;
+        text-align: center;
+    }
+}
+/*---------------------Hero-------------------------*/
+.hero {
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(
+        0,
+        0,
+        0,
+        0.2
+    ); /* Adjust the background color and opacity as needed */
+}
+
+.text {
+    color: #fff; /* Adjust the text color as needed */
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 767px) {
+    .text p {
+        font-size: 14px; /* Adjust the font size for smaller screens */
+        padding: 10px; /* Adjust the padding for smaller screens */
     }
 }
 
 /*---------------------Main styles-------------------------*/
 main {
     padding: 40px 0;
+    flex: 1;
 }
 
+/*
 .hero {
-    position: relative;
+	position: relative;
 }
 
 .hero .text {
@@ -148,6 +222,7 @@ main {
 .hero .text h1 {
     font-size: 50px;
 }
+
 
 @media (max-width: 768px) {
     .hero .text {
@@ -170,9 +245,9 @@ main {
     font-size: 22px;
     margin-bottom: 20px;
     margin-top: 50px;
-}
+} */
 
-/*---------------------Thumbnail single.php-------------------------*/
+/*---------------------Thumbnails-------------------------*/
 
 .single-post {
     background-color: #212020;
@@ -184,12 +259,33 @@ main {
     border: 1px solid #f651d7;
 }
 
-/*---------------------Article Sidebar-------------------------*/
+.search-thumbnail {
+    background-color: #3c393c;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #f651d7;
+    margin-bottom: 10px;
+}
+
+.search-thumbnail img {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.hero-thumbnail {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-thumbnail img {
+    image-resolution: inherit;
+}
+
+/*---------------------Article, Sidemenu Sidebar-------------------------*/
 
 article {
     background-color: #3c393c;
     border: solid 1px #f651d7;
-    border-top: solid 2px #f651d7;
     padding: 30px;
     position: relative;
     color: white;
@@ -265,20 +361,25 @@ article .categories > li > a {
 .side-menu {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
-.side-menu > li {
-    border-bottom: solid 1px #ccc;
+.side-menu ul {
+    padding-inline-start: 0;
+}
+
+.side-menu ul li {
+    border-bottom: solid 1px #e888d6;
     list-style: none;
     padding: 10px 0;
 }
 
 #sidebar {
     background-color: #333;
-    border: solid 1px black;
-    border-top: solid 1px black;
+    border: solid 1px #f651d7;
     color: white;
     padding-top: 20px;
+    border-radius: 10px;
 }
 
 #sidebar > ul {
@@ -326,30 +427,60 @@ article .categories > li > a {
 #sidebar input[type='submit'] {
     background-color: rgb(217, 20, 220);
     margin-top: 10px;
+    margin-bottom: 10px;
 }
+
+/*-------------------Contact Form-----------------*/
 
 /*-------------------Footer-----------------*/
 
 footer {
     background-color: #800360;
     color: #ffffff;
-    padding-left: 40px;
-    padding-top: 20px;
+    padding: 50px 0px;
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
+    margin-top: auto;
+}
+footer ul li {
+    padding: 5px 0px;
 }
 
-.footer-column {
-    width: 30%;
+.adress span,
+.contact span,
+.social span {
+    color: #fff;
+    font-weight: 600;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.adress li p,
+.contact li a,
+.social li a {
+    color: #fff;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.social li {
     float: left;
-    margin-right: 5%;
 }
 
-footer p {
-    font-size: 12px;
+.adress,
+.contact,
+.social {
+    list-style: none;
 }
 
-.clear {
-    clear: both;
+.fa {
+    color: #ff7ee7;
+    margin-right: 15px;
+    font-size: 20px;
 }
