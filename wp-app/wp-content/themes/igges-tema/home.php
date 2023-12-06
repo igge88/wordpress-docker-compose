@@ -27,7 +27,7 @@
                                 <img src="<?= the_post_thumbnail_url("large") ?>" alt="">
                                 <ul class="meta">
                                     <li>
-                                        <i class="fa fa-container"></i>
+                                        <i class="fa fa-calendar"></i>
                                         <?= the_time('j F, Y') ?>
                                     </li>
                                     <li class="fa fa-user">

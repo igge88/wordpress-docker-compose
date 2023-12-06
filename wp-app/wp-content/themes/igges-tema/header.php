@@ -12,10 +12,17 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
+
         <div class="header-title">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/gvblack.png" alt="Gameverse Logo">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/gvwhite.png" alt="Gameverse Logo">
         </div>
+        <div class="col-xs-4 text-right visible-xs">
+            <div class="mobile-menu-wrap">
+                <i class="fa fa-bars menu-icon"></i>
+            </div>
+        </div>
+
     </header>
     <nav class="nav">
         <div class="container">

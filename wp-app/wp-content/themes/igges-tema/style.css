@@ -127,7 +127,19 @@ header {
     color: white;
 }
 
-@media (max-width: 768px) {
+#header .mobile-menu-wrap {
+    color: white;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+#header .mobile-menu-wrap .menu-icon {
+    min-width: 25px;
+    padding-top: 20px;
+    color: white;
+}
+
+ @media (max-width: 768px) {
     .nav {
         display: none;
         height: auto;
@@ -139,13 +151,19 @@ header {
     }
 
     .nav .menu > li {
-        /* float: none;
-        width: 100%; */
+        float: none;
+        width: 100%;
         margin-right: 0;
         width: 100%;
         text-align: center;
     }
+
+    .header-title {
+       padding-left: 50px;
+       padding-top: 20px;
+    }
 }
+
 /*---------------------Hero-------------------------*/
 .hero {
     position: relative;
@@ -176,7 +194,7 @@ header {
         0,
         0,
         0,
-        0.2
+        0.4
     ); /* Adjust the background color and opacity as needed */
 }
 
@@ -184,6 +202,8 @@ header {
     color: #fff; /* Adjust the text color as needed */
     text-align: center;
     padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
 }
 
 @media (max-width: 767px) {
