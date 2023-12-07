@@ -4,7 +4,7 @@ Theme URI: http://www.iggestheme.com
 Description: A site for news and blogs
 Author: igge
 Author URI: http://www.iggeswebsite.com
-Version: 2.7
+Version: 2.8
 Text Domain: iggeakanacho
 */
 
@@ -75,31 +75,28 @@ textarea {
     padding-right: 0px;
 }
 
-#cover {
-    padding: 0;
-    margin-top: -40px;
-}
-
-/*------------------- Header ---------------------- */
+/*------------------- Header & Nav ---------------------- */
 
 header {
     background-color: #800360;
     color: #ffffff;
-    padding-top: 0px;
-    padding-bottom: 20px;
     display: flex;
     justify-content: center;
+    padding-top: 8px;
+    padding-bottom: 10px;
 }
 
-.header-title {
-    padding-top: 10px;
+.header-logo {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .nav {
-    background-color: #333;
+    background-color: #800360;
     height: 40px;
     display: flex;
     justify-content: center;
+    border-top: solid 0.5px white;
 }
 
 .nav .menu {
@@ -111,17 +108,14 @@ header {
 }
 
 .nav .menu > li {
-    /* float: left; */
     line-height: 40px;
-    /* list-style: none; */
     margin-right: 10px;
-    /* padding: 0 15px; */
-    padding: 0 15px;
+    padding: 0 40px;
 }
 
-.nav .menu > li.current-menu-item {
+/* .nav .menu > li.current-menu-item {
     background-color: rgba(0, 0, 0, 0.1);
-}
+} */
 
 .nav .menu > li > a {
     color: white;
@@ -138,8 +132,9 @@ header {
     padding-top: 20px;
     color: white;
 }
+/* Add the mobile menu styles and media query */
 
- @media (max-width: 768px) {
+@media (max-width: 768px) {
     .nav {
         display: none;
         height: auto;
@@ -158,13 +153,20 @@ header {
         text-align: center;
     }
 
-    .header-title {
-       padding-left: 50px;
-       padding-top: 20px;
+    .header-logo {
+        padding-left: 50px;
+        padding-top: 20px;
     }
 }
 
 /*---------------------Hero-------------------------*/
+
+#cover {
+    padding: 0;
+    margin-top: -40px;
+    margin-bottom: -40px;
+}
+
 .hero {
     position: relative;
 }
